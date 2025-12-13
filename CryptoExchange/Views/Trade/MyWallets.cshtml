@@ -1,0 +1,25 @@
+﻿@model List<MyCryptoViewModel>
+
+<div class="dashboard-table-container">
+    <h2 class="dashboard-title">Мои криптовалюты</h2>
+
+    <table class="dashboard-table">
+        <thead>
+            <tr>
+                <th>Символ</th>
+                <th>Название</th>
+                <th>Количество</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var crypto in Model)
+            {
+                <tr>
+                    <td>@crypto.Symbol</td>
+                    <td>@crypto.ShortName-@crypto.Name</td>
+                    <td>@crypto.Balance</td> 
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

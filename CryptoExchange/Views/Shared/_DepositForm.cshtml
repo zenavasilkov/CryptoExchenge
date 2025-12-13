@@ -1,0 +1,38 @@
+﻿@model DepositViewModel
+
+<link href="~/css/deposit.css" rel="stylesheet"/>
+  
+
+<form asp-action="Deposit" asp-controller="Trade" method="post" class="deposit-form" id="depositForm" data-ajax="true" >
+    <button class="deposit-close-btn" onclick="closeDeposit()">×</button>
+    <h2 class="deposit-title">Пополнение баланса</h2>
+    <div>
+        <label asp-for="CardNumber" class="label"></label>
+        <input asp-for="CardNumber" class="form-control" placeholder="1234 5678 9012 3456" maxlength="19" oninput="formatCardNumber(this)" />
+        <span asp-validation-for="CardNumber" class="text-danger"></span>
+    </div>
+    <div class="form-row">
+        <div class="form-group" maxlength="7">
+            <label asp-for="Expiry"></label>
+            <input asp-for="Expiry" class="form-control" placeholder="MM/YY" oninput="formatExpiry(this)" onblur="validateExpiry(this)" />
+            <span asp-validation-for="Expiry" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="CVV"></label>
+            <input asp-for="CVV" class="form-control" placeholder="123" maxlength="3" oninput="validateCVV(this)" />
+            <span asp-validation-for="CVV" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Amount"></label>
+        <input asp-for="Amount" class="form-control" placeholder="Сумма в USDT" maxlength="9" oninput="validateAmount(this)" />
+        <span asp-validation-for="Amount" class="text-danger"></span>
+    </div>
+
+    <input type="hidden" asp-for="CurrencyCode" />
+
+    <button type="submit" class="btn btn-primary btn-block">Пополнить</button>
+</form> 
+
+

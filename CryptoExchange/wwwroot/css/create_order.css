@@ -1,0 +1,41 @@
+﻿.create-order-form {
+    width: 100%;
+    max-width: 420px;
+    margin: 40px auto;
+    background-color: #1c1c1c;
+    padding: 24px;
+    border-radius: 20px;
+    border: 1px solid #2ecc71;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+}
+
+    .create-order-form h2 {
+        margin-bottom: 24px;
+        font-size: 20px;
+        color: #2ecc71;
+    }
+
+    .create-order-form .form-group {
+        margin-bottom: 16px;
+    }
+
+    .create-order-form .form-control {
+        background-color: #333;
+        border: 1px solid #555;
+        color: #eee;
+        border-radius: 8px;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+        .create-order-form .form-control:focus {
+            background-color: #444;
+            border-color: #2ecc71;
+            outline: none;
+        }
+
+    .create-order-form .btn {
+        width: 100%;
+        padding: 12px;
+        font-weight: bold;
+    }

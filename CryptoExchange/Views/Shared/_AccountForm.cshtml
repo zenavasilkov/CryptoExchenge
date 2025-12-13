@@ -1,0 +1,28 @@
+﻿@model AccountFormViewModel
+
+<link href="~/css/account.css" rel="stylesheet"/>
+    
+<script>
+    function showLogin() {
+        document.getElementById('loginForm').style.display = 'block';
+        document.getElementById('registerForm').style.display = 'none';
+    }
+    function showRegister() {
+        document.getElementById('loginForm').style.display = 'none';
+        document.getElementById('registerForm').style.display = 'block';
+    }
+</script>
+
+
+<div class="tabs">
+    <button id="loginTab" class="tab @(Model.ActiveTab == "login" ? "active" : "")">Войти</button>
+    <button id="registerTab" class="tab @(Model.ActiveTab == "register" ? "active" : "")">Зарегистрироваться</button>
+</div> 
+
+<div id="loginContent" class="form-content @(Model.ActiveTab == "login" ? "active" : "")">
+    @await Html.PartialAsync("_LoginPartial", Model.Login)
+</div> 
+
+<div id="registerContent" class="form-content @(Model.ActiveTab == "register" ? "active" : "")">
+    @await Html.PartialAsync("_RegisterPartial", Model.Register)
+</div>

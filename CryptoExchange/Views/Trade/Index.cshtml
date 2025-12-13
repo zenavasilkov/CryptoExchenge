@@ -1,0 +1,13 @@
+﻿@model TradePageViewModel
+@{
+	ViewData["Title"] = "Торговля";
+}
+
+<div class="trade-layout">
+	<div class="top">@await Html.PartialAsync("_TopBar", Model)</div>
+
+	<div class="main">
+		<div class="left"> @await Html.PartialAsync("_SideBar")</div>
+		<div class="center" id="tradeContent"></div> 
+	</div>
+</div> 

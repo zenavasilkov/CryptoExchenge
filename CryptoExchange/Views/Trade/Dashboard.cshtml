@@ -1,0 +1,29 @@
+﻿@model List<CurrencyMarketViewModel>
+@{
+	ViewData["Title"] = "Dashboard";
+}
+
+<div class="dashboard-table-container">
+	<h2 class="dashboard-title">Рынок криптовалют</h2>
+	<table class="dashboard-table">
+		<thead>
+			<tr>
+				<th>Символ</th> 
+				<th>Название</th>
+				<th>Цена (USDT)</th>
+				<th>Торговать</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach(var coin in Model)
+			{
+				<tr>
+					<td>@coin.Symbol</td>
+					<td>@coin.ShortName - @coin.Name</td>
+					<td>@coin.PriceInUSDT.ToString("F2")</td>
+					<td><button class="btn-trade" onclick="startTrade('@coin.ShortName')">Торговать</button></td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div> 

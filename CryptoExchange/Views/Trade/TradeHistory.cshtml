@@ -1,0 +1,30 @@
+﻿@model List<TradeHistoryViewModel>
+
+<div class="dashboard-table-container">
+	<h2 class="dashboard-title">История сделок</h2>
+	<table class="dashboard-table">
+		<thead>
+			<tr>
+				<th>Тип</th>
+				<th>Валюта</th>
+				<th>Количество</th>
+				<th>Курс (USDT за штуку)</th>
+				<th>Размер сделаки (USDT)</th>
+				<th>Дата</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var trade in Model)
+			{
+				<tr>
+					<td>@trade.Type</td>
+					<td>@trade.Currency</td>
+					<td>@trade.Amount</td>
+					<td>@trade.ExchangeRate</td>
+					<td>@trade.TotalInUSDT</td>
+					<td>@trade.Timestamp.ToString("dd.MM.yyyy HH:mm")</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>

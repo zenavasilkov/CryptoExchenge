@@ -1,0 +1,7 @@
+﻿@model TradePageViewModel 
+ 
+<span class="fs-5 fw-bold top-text">@Model.UserName</span>
+<span class="fs-5 fw-bold top-text">Баланс: @Model.UsdtBalance.ToString("N2").Replace(",", " ") USDT</span>
+<button class="btn-my-primary" onclick="showDeposit()">Пополнить</button>
+<button class="btn-my-primary" onclick="showWithdraw()">Вывести</button>
+	 

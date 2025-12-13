@@ -1,0 +1,72 @@
+﻿@{
+	ViewData["Title"] = "О нас"; 
+}
+
+<link href="~/css/about.css" rel="stylesheet"/>
+
+<div class="about-container">
+    <h1 class="text-center">О нас</h1>
+     
+    <div class="accordion">
+        <div class="accordion-header">
+            <h3>О платформе</h3>
+            <button class="toggle-btn">+</button>
+        </div>
+        <div class="accordion-content">
+            <p>
+                BRUCrypto это децентрализированная биржа поддерживающая 25 криптовалют.
+                У нас вы сможете не только торговать криптовалютой, но и получать незабываемый пользовательский опыт.
+            </p>
+        </div>
+    </div>
+     
+    <div class="accordion">
+        <div class="accordion-header">
+            <h3>Как это работает</h3>
+            <button class="toggle-btn">+</button>
+        </div>
+        <div class="accordion-content">
+            <p>
+                Вы создаёте ордер на покупку или продажу криптовалюты. Система (MatcingEngine) автоматически находит подходящие ордера и совершает сделку. 
+                Если был найден выгодный офер то сумма оставшеяся после выполнения ордера возвращается на баланс.
+            </p>
+        </div>
+    </div>
+     
+    <div class="accordion">
+        <div class="accordion-header">
+            <h3>Безопасность</h3>
+            <button class="toggle-btn">+</button>
+        </div>
+        <div class="accordion-content">
+            <p>
+                Все данные пользователей защищены шифрованием. Доступ возможен только через авторизацию. 
+                Всех неавторизованных пользователей при попытке начать торги без авторизации в системе перенаправляет на главную страницу
+            </p>
+        </div>
+    </div>
+     
+    <div class="accordion">
+        <div class="accordion-header">
+            <h3>Поддержка</h3>
+            <button class="toggle-btn">+</button>
+        </div>
+        <div class="accordion-content">
+            <p>
+                У вас возникли вопросы? Напишите нам в Telegram @@evgeny_vasilkov6 или позвоните по телефону +375 44 772 6981.
+                Мы всегда на связи!
+            </p>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const accordion = header.parentElement;
+                accordion.classList.toggle('open');
+            });
+        });
+    </script>
+}

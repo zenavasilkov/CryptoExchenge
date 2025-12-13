@@ -1,0 +1,98 @@
+﻿
+.deposit-modal-overlay {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7); 
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+ 
+.deposit-modal-container {
+    background-color: #1C1C1C;
+    padding: 32px;
+    border-radius: 12px;
+    max-width: 400px;
+    width: 100%;
+    border: 1px solid #2ECC71;
+    color: white;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 0 30px rgba(0, 255, 170, 0.15);
+}
+ 
+    .deposit-modal-container h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 22px;
+        color: #CCC;
+    }
+     
+.deposit-close-btn {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+ 
+.deposit-form .form-group {
+    margin-bottom: 20px;
+}
+
+.deposit-form .form-control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #BBB;
+    background-color: #222;
+    color: #EEE;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+    .deposit-form .form-control:focus {
+        border-color: #2ECC71;
+        background-color: #333;
+        color: #FFF;
+    }
+
+    .deposit-form .form-control::placeholder {
+        color: #777;
+    }
+    
+label {
+    color: #CCC;
+}
+
+.deposit-form .btn-primary {
+    width: 100%;
+    padding: 12px;
+    background-color: #2ECC71;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .deposit-form .btn-primary:hover {
+        background-color: #27ae60;
+    }
+
+.deposit-form .text-danger {
+    font-size: 13px;
+    color: #e74c3c;
+    margin-top: 4px;
+    display: block; 
+}
+ 

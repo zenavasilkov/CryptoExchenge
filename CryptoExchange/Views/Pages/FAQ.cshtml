@@ -1,0 +1,148 @@
+﻿@{
+	ViewData["Title"] = "FAQ";
+} 
+
+<link href="~/css/about.css" rel="stylesheet" />
+
+<div class="about-container">
+    <h1 class="text-center mb-5">Часто задаваемые вопросы</h1>
+     
+    <div class="accordion">
+        <div class="accordion-header">
+            <h3>Как зарегистрироваться на платформе?</h3>
+            <button class="toggle-btn">+</button>
+        </div>
+        <div class="accordion-content">
+            <p>
+                Регистрация проста: перейдите на главную страницу и нажмите «Начать сейчас».
+                Затем выберите «Зарегистрироваться» и заполните форму регистрации.
+            </p>
+        </div>
+    </div>
+     
+    <div class="accordion">
+        <div class="accordion-header">
+            <h3>Как пополнить баланс?</h3>
+            <button class="toggle-btn">+</button>
+        </div>
+        <div class="accordion-content">
+            <p>
+                Для пополнения USDT перейдите в раздел «Пополнить» и введите сумму.
+                Мы поддерживаем пополнение через банковскую карту.
+            </p>
+        </div>
+    </div>
+     
+    <div class="accordion">
+        <div class="accordion-header">
+            <h3>Как вывести криптовалюту?</h3>
+            <button class="toggle-btn">+</button>
+        </div>
+        <div class="accordion-content">
+            <p>
+                Криптовалюту "Вывести" нельзя, можно продать криптовалюту и затем вывести USDT как доллары
+            </p>
+        </div>
+    </div>
+     
+    <div class="accordion">
+        <div class="accordion-header">
+            <h3>Как создать ордер на покупку или продажу?</h3>
+            <button class="toggle-btn">+</button>
+        </div>
+        <div class="accordion-content">
+            <p>
+                Выберите интересующую криптовалюту на странице "Dashboard".
+                Укажите цену, количество и тип ордера (купить/продать). Нажмите «Создать ордер».
+            </p>
+        </div>
+    </div>
+     
+    <div class="accordion">
+        <div class="accordion-header">
+            <h3>Что такое Matching Engine?</h3>
+            <button class="toggle-btn">+</button>
+        </div>
+        <div class="accordion-content">
+            <p>
+                Это внутренняя система матча, которая автоматически ищет подходящие ордера и совершает сделки.
+                При создании каждого нового ордера ядро подбирает подходящий ордер учитывая цену и время создания ордера.
+            </p>
+        </div>
+    </div>
+     
+    <div class="accordion">
+        <div class="accordion-header">
+            <h3>Как проверить историю сделок?</h3>
+            <button class="toggle-btn">+</button>
+        </div>
+        <div class="accordion-content">
+            <p>
+                Перейдите в раздел «История сделок». Там вы найдете список всех ваших покупок и продаж,
+                включая дату, объём и цену каждой сделки.
+            </p>
+        </div>
+    </div>
+     
+    <div class="accordion">
+        <div class="accordion-header">
+            <h3>Поддерживаете ли вы двухфакторную аутентификацию (2FA)?</h3>
+            <button class="toggle-btn">+</button>
+        </div>
+        <div class="accordion-content">
+            <p>
+                Нет, так ка биржа децентрацизированная и не хранит никаких данных о своих клиентах
+            </p>
+        </div>
+    </div>
+     
+    <div class="accordion">
+        <div class="accordion-header">
+            <h3>Как я могу связаться с поддержкой?</h3>
+            <button class="toggle-btn">+</button>
+        </div>
+        <div class="accordion-content">
+            <p>
+                Напишите нам в Telegram @@evgeny_vasilkov6.
+                Наши специалисты ответят вам в течение 24 часов.
+            </p>
+        </div>
+    </div>
+     
+    <div class="accordion">
+        <div class="accordion-header">
+            <h3>Какие криптовалюты доступны?</h3>
+            <button class="toggle-btn">+</button>
+        </div>
+        <div class="accordion-content">
+            <p>
+                BRUCrypto поддерживает 25 криптовалют, включая Bitcoin (BTC), Ethereum (ETH),
+                Binance Coin (BNB), Tether (USDT) и другие популярные токены.
+            </p>
+        </div>
+    </div>
+     
+    <div class="accordion">
+        <div class="accordion-header">
+            <h3>Как происходит матчинг ордеров?</h3>
+            <button class="toggle-btn">+</button>
+        </div>
+        <div class="accordion-content">
+            <p>
+                Матчинг происходит по алгоритму First-In-First-Out (FIFO).
+                Система ищет подходящие ордера по цене и времени создания.
+            </p>
+        </div>
+    </div>
+</div> 
+
+@section Scripts {
+    <script>
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const accordion = header.parentElement;
+                accordion.classList.toggle('open');
+            });
+        });
+    </script>
+}

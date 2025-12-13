@@ -1,0 +1,35 @@
+﻿@model CreateOrderViewModel
+
+<link href="~/css/create_order.css" rel="stylesheet" />
+
+<div class="create-order-form">
+    <h2 class="text-center text-success">Создание ордера: @Model.CurrencyShortName</h2>
+
+    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+    <form id="createOrderForm" asp-action="SubmitOrder" asp-controller="Trade" method="post">
+        <input type="hidden" asp-for="CurrencyID" />
+        <input type="hidden" asp-for="CurrencyShortName" />
+
+        <div class="form-group">
+            <label asp-for="IsSellOrder">Тип ордера</label><br />
+            <select name="IsSellOrder" id="orderTypeSelect" class="form-control">
+                <option value="false" selected>Купить</option>
+                <option value="true">Продать</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label id="exchangeRateLabel" for="ExchangeRate">Цена (USDT за 1 ед.)</label>
+            <input asp-for="ExchangeRate" class="form-control numeric-input" id="ExchangeRate"  />
+            <span asp-validation-for="ExchangeRate" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label id="amountLabel" for="Amount">Количество</label>
+            <input asp-for="Amount" class="form-control numeric-input" id="Amount" />
+            <span asp-validation-for="Amount" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-success btn-block mt-3">Создать ордер</button>
+    </form>
+</div>  
